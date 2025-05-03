@@ -1,0 +1,39 @@
+﻿@page
+@model GirifinDev.Pages.Admin.UserPanel.IndexModel
+@{
+    ViewBag.Title = "مدیریت کاربران";
+}
+
+<p>
+    <a asp-page="Add" class="btn btn-success">کاربر جدید</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>عکس کاربر</th>
+            <th>نام کاربری</th>
+            <th>ایمیل</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.GetUserAll)
+        {
+            <tr>
+                <td>
+                    <img src="/AdminPanel/UserPanel/@(item.ImageUrl)" class="thumbnail" style="max-width:120px" />
+                </td>
+                <td>
+                    @item.UserName
+                </td>
+                <td>
+                    @item.Email
+                </td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@(item.Id)" class="btn btn-warning">ویرایش</a>
+                    <a asp-page="Delete" asp-route-id="@(item.Id)" class="btn btn-danger">حذف</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

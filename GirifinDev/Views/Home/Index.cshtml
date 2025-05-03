@@ -1,0 +1,250 @@
+﻿@model GirifinDev.Domain.Model._PageComment
+@{
+    ViewData["Title"] = "Griffin Dev";
+}
+<section id="Project" class="portfolio px-[15px]">
+    <div class="container laptop:w-[95%]">
+        <h2 class="title-sec text-black-text title-md pb-[20px]">
+            آثار ما را ببینید
+        </h2>
+        @* <p class="des-content w-full text-[16px] text-black-text text-center mb-[30px]">
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ut labore et dolore magna aliqua.
+        </p> *@
+
+        <div class="btns-box ">
+            <a href="#" class="portfolio-btn bg-hover text-white" data-category="0">همه</a>
+            @foreach (var item in ViewBag.Category)
+            {
+                <a href="#" class="portfolio-btn transition-low" data-category="@item.Id">@item.Title</a>
+            }
+        </div>
+        <div id="portfolio-img-box" class="portfolio-img-box flex flex-wrap">
+            @foreach (var item in ViewBag.AllProject)
+            {
+                <div class="portfolio-img transition-low" data-category="@item.CategoryId">
+                    <img src="/AdminPanel/ProjectPanel/@(item.ImageUrl)" class="w-full h-full" alt="">
+                    <div class="portfolio-content black-section-bg">
+                        <h3 class="title-sm text-white"><a href="@(item.Link)">@item.Name</a></h3>
+                        <p class="des-content w-[95%] p-[5px]">
+                            @item.Description
+                        </p>
+                        <a href="@(item.Link)" class="popup transition-low">
+                            <ion-icon name="contract-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- end portfolio section -->
+<!-- Advertising -->
+
+<section class="Advertising bg-adv-3">
+    <div class="bg-box black-section-bg   flex justify-center items-center pc:flex-col gap-2 py-[80px]">
+        <span class="Title-lg text-[32px] ipad:text-[25px]  text-center text-white">ما آماده آمدن هستیم</span>
+
+        <a href="#ContactUs" onclick="smoothScroll(event)"
+           class="btn-info transition-low pc:my-[20px] bg-white text-hover hover:bg-transparent hover:text-white ">
+            شروع کنید!
+        </a>
+
+    </div>
+
+</section>
+
+<!-- end Advertising -->
+<!-- My Team Section -->
+
+
+<section class="my-team w-full   py-[80px]">
+    <div class="container-Lg pc:w-full">
+        <h2 class="title-sec text-black-text title-md pb-[20px]">
+            با تیم ما ملاقات کنید
+        </h2>
+        @*         <p class="des-content w-full text-black-text text-center mb-[30px]">
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+        </p> *@
+
+
+
+        <div class="team-member ">
+            @foreach (var item in ViewBag.TeamUser)
+            {
+                <div class="member-cart shodow-low">
+                    <div class="member-img">
+                        <img src="/AdminPanel/UserPanel/@(item.ImageUrl)" class="w-full h-full" alt="">
+                    </div>
+                    <h3 class="title-sm text-black-text text-[28px] font-normal mt-[20px] mb-[10px]  transition-med">
+                        @item.UserName
+                    </h3>
+                    <span class="member-position text-dark-gray">@item.UserSkil</span>
+
+                    <p class="cart-des text-dark-gray line-clamp-[2]">
+                        @item.Description
+                    </p>
+                    <div class="contact-com ">
+                        <a href="@(item.GitHub)">
+                            <i class="contact text-white transition-med">
+                                <i class="gg-git-pull"></i>
+                            </i>
+                        </a>
+                        <a href="@(item.LinkDin)">
+                            <i class="contact text-white transition-med">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </i>
+                        </a>
+                        <a href="@(item.SiteLink)">
+                            <i class="contact text-white transition-med">
+                                <ion-icon name="logo-google"></ion-icon>
+                            </i>
+                        </a>
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!-- client section -->
+<!-- Countact US -->
+
+<section class=" py-[80px] w-full  flex justify-center" id="ContactUs">
+    <div class="container h-full px-[15px]">
+        <h2 class="title-sec text-black-text title-md pb-[20px]">
+            تماس با ما
+        </h2>
+        <p class="des-content w-full text-black-text text-center mb-[30px] py-[20px]">
+            راه های ارتباطی با ما هم میتوانید از طریق فرم زیر اقدام کنید هم از طریق ایمیل
+        </p>
+
+        <div class="contact-me w-full flex justify-between laptop:flex-col laptop:justify-center laptop:items-center">
+            <div class="location  my-[20px] h-full flex justify-center flex-col items-center ">
+                <i class="  text-[36px] flex justify-center items-end py-[20px]">
+                    <ion-icon name="location-outline" class=" text-[30px] text-hover"></ion-icon>
+                </i>
+                <span class="flex justify-center items-center">
+                    ایران
+                </span>
+                <span class=" flex justify-center items-center">
+                    ایران
+                </span>
+            </div>
+            <div class="email  my-[20px] h-full flex justify-center flex-col items-center ">
+                <i class=" text-[36px] flex justify-center items-end py-[20px]">
+                    <ion-icon name="mail-outline" class=" text-[30px] text-hover"></ion-icon>
+
+                </i>
+                <span class=" flex justify-center items-center">
+                    girrifindev@gmail.com
+                </span>
+            </div>
+
+
+            <div class="phone  my-[20px]  flex justify-center flex-col items-center">
+                <i class=" text-[36px] flex justify-center items-end py-[20px]">
+                    <ion-icon name="call-outline" class=" text-[30px] text-hover"></ion-icon>
+                </i>
+                <p class=" text-[16px] flex justify-center items-center">
+                    989057757319+
+                </p>
+                <p class=" flex justify-center items-center">
+                    989057757319+
+                </p>
+            </div>
+        </div>
+
+        <form method="post" enctype="multipart/form-data" class="send-massage w-auto flex items-center flex-col pc:w-full my-[60px] mx-auto">
+
+            <div class="top-mass w-[60%] laptop:w-full flex items-center laptop:flex-col justify-between h-[30%]">
+                <input asp-for="Email" id="txtEmail" placeholder="ایمیل" class="input-mass w-[45%] laptop:w-full">
+                <input asp-for="Name" id="textName" placeholder="نام" class="input-mass w-[45%] laptop:w-full">
+            </div>
+
+            <textarea asp-for="comment" class="w-[60%] laptop:w-full my-[40px]" placeholder="پیام" id="txtComment" cols="10"
+                      rows="10"></textarea>
+
+
+            <input class="btn-info text-center transition-low border-hover text-hover hover:bg-hover hover:text-white "
+                   value="ارسال پیام" type="submit" id="subclick"></input>
+
+
+        </form>
+    </div>
+
+</section>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#subclick").click(function () {
+                var name = $("#textName").val();
+                var email = $("#txtEmail").val();
+                var comment = $("#txtComment").val();
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/index",
+                    data: { name: name, email: email, comment: comment },
+                });
+                if (!name && !email && !comment) {
+                    alert("ارسال پیام با شکست مواجه شد");
+                } else {
+                    alert("پیام با موفقیت ثبت شد");
+                }
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".portfolio-btn");
+            const projectContainer = document.getElementById("portfolio-img-box");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const categoryId = button.getAttribute("data-category");
+
+                    // Remove bg-hover class from all buttons
+                    buttons.forEach(btn => btn.classList.remove("bg-hover"));
+                    buttons.forEach(btn => btn.classList.remove("text-white"));
+                    // Add bg-hover class to the clicked button
+                    button.classList.add("bg-hover");
+                    button.classList.add("text-white");
+
+                    fetch(`/Home/GetProjectsByCategory?categoryId=${categoryId}`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`HTTP error! Status: ${response.status}`);
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            if (!data || data.length === 0) {
+                                projectContainer.innerHTML = "<p>هیچ پروژه‌ای یافت نشد.</p>";
+                            } else {
+                                projectContainer.innerHTML = ""; // Clear the container
+                                data.forEach(project => {
+                                    const projectElement = document.createElement("div");
+                                    projectElement.classList.add("portfolio-img", "transition-low");
+                                    projectElement.innerHTML = `
+                                                                                                        <img src="/AdminPanel/ProjectPanel/${project.imageUrl}" class="w-full h-full" alt="">
+                                                                                                        <div class="portfolio-content black-section-bg">
+                                                                                                            <h3 class="title-sm text-white">${project.name}</h3>
+                                                                                                            <p class="des-content w-[95%] p-[5px]">
+                                                                                                                ${project.description}
+                                                                                                            </p>
+                                                                                                            <a href="${project.link}" class="popup transition-low">
+                                                                                                                <ion-icon name="contract-outline"></ion-icon>
+                                                                                                            </a>
+                                                                                                        </div>`;
+                                    projectContainer.appendChild(projectElement);
+                                });
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error fetching projects:', error);
+                            projectContainer.innerHTML = "<p>خطایی رخ داده است. لطفا دوباره تلاش کنید.</p>";
+                        });
+                });
+            });
+        });
+    </script>
+}

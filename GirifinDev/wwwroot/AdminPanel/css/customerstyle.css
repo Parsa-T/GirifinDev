@@ -1,0 +1,19 @@
+﻿#Wellcoe {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin:2% 90px;
+    position:absolute;
+    width:800px;
+}
+
+#top-btn{
+    margin:10px;
+}
+form{
+    margin:20px;
+}
+input{
+    margin:10px;
+}

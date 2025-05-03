@@ -1,0 +1,27 @@
+﻿@page
+@model GirifinDev.Pages.Admin.UserPanel.DeleteModel
+@{
+    ViewBag.Title = "حذف کاربر";
+}
+<form method="post" enctype="multipart/form-data">
+    <input asp-for="DeleteUser.Id" type="hidden" />
+    <label>نام کاربری</label>
+    <input asp-for="DeleteUser.UserName" class="form-control" readonly />
+    <label>سمت کاربر</label>
+    <input asp-for="DeleteUser.UserSkil" class="form-control" readonly />
+    <label>عکس کاربر</label>
+    <img src="/AdminPanel/UserPanel/@(Model.DeleteUser.ImageUrl)" class="thumbnail" style="max-width:120px" />
+    <label>توضیح مختصر</label>
+    <textarea asp-for="DeleteUser.Description" class="form-control" readonly></textarea>
+    <label>ایمیل</label>
+    <input asp-for="DeleteUser.Email" class="form-control" readonly />
+    <label>رمزعبور</label>
+    <input asp-for="DeleteUser.Password" class="form-control" readonly />
+    <label>لینک سایت</label>
+    <input asp-for="DeleteUser.SiteLink" class="form-control" readonly />
+    <label>گیت هاب</label>
+    <input asp-for="DeleteUser.GitHub" class="form-control" readonly />
+    <label>صفحه لینک دین</label>
+    <input asp-for="DeleteUser.LinkDin" class="form-control" readonly />
+    <input type="submit" value="حذف" class="btn btn-danger" />
+</form>

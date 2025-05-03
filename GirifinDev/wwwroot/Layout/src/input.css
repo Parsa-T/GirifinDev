@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .header {
+        @apply w-full h-[75px]
+    }
+
+    .btn-info {
+        @apply font-semibold  border-[0.8px] border-white  rounded-[25px] py-[14px] px-[30px] text-white
+    }
+   
+
+    
+    .title-lg {
+        @apply relative text-[60px] font-bold text-center  text-white laptop:text-[40px]  pb-[20px]
+    }
+   
+    .title-sm {
+        @apply relative w-full text-center text-black-text text-[28px]  pb-[10px] font-bold mb-[20px]
+    }
+    .title-md{
+        @apply relative text-[32px]   pb-[15px] mb-[20px] text-center text-white 
+    }
+    .des-content {
+        @apply text-center text-[16px]  font-normal  text-white leading-[32px]  mb-[10px]  
+    }
+    .cart-des{
+        @apply w-[90%] text-[16px] flex justify-center text-center mx-auto py-[15px]
+    }
+
+    .icon-list {
+        @apply p-[20px] text-2xl hidden laptop:flex text-white
+    }
+
+    .nav-ul .list-nav {
+        @apply p-2 
+    }
+
+    .nav-ul {
+        @apply  h-full flex justify-start items-center laptop:hidden
+    }
+
+    .nav-ul .list-nav a{
+        @apply text-[14px] font-bold 
+    }
+    .hidden-list{
+        @apply hidden border-t-[0.5px] border-[#ffffff52] w-full px-[15px] py-[30px]
+    }
+
+    .web-icon {
+        @apply w-[30%] flex justify-center items-center laptop:pl-5
+    }
+
+    .logo {
+        @apply flex items-center h-full
+    }
+
+    .header-content {
+        @apply w-[80%] laptop:w-[100%] mx-auto h-full flex justify-center items-center
+    }
+
+
+
+
+
+   
+
+    /* overlay */
+    .overlay {
+        @apply w-full h-[400px] tablet:h-auto flex justify-center items-center flex-col 
+    }
+
+   
+
+    /* About me  */
+    .about-we{
+        @apply  py-[80px] w-full h-auto  flex justify-center items-center
+    }
+    .image-how{
+        @apply  w-[50%] pc:hidden 
+    }
+    .description-we{
+        @apply  w-[50%] pc:w-full flex flex-col justify-start
+    }
+    .des-about{
+        @apply  w-full pc:w-full mb-[10px]
+    }
+    .about-list {
+        @apply text-[16px] mb-[30px]  flex items-center
+    }
+
+    /* Advertising */
+
+    .Advertising {
+        @apply w-full
+    }
+
+    .bg-box {
+        @apply w-full h-full
+    }
+
+
+
+    /* Services */
+
+    .all-cart-services {
+        @apply w-full flex justify-around flex-wrap items-center
+    }
+
+    .cart-services {
+        @apply w-[275px]  flex flex-col justify-center items-center pc:w-[45%] laptop:w-full
+    }
+
+    .top-icon-service {
+        @apply w-full h-[1/3] flex justify-center items-center
+    }
+
+    .icon-box-services {
+        @apply text-[40px] flex justify-center items-center rounded-full w-[100px] h-[100px] text-hover
+    }
+
+    .icon-services{
+        @apply text-[55px]
+    }
+
+
+    .bottom-des-services {
+        @apply flex justify-center items-center flex-col
+    }
+
+    /* features */
+    .features-sec {
+        @apply w-full flex flex-col items-center
+    }
+
+    .all-features {
+        @apply w-full flex my-[10px] justify-around laptop:flex-col
+    }
+
+    .all-features .cart-features {
+        @apply w-[30%] laptop:w-full pc:my-[5px] flex items-start justify-center
+    }
+
+    .cart-features .right-icon {
+        @apply h-full mt-[20px]
+    }
+
+    .icon-box {
+        @apply text-[30px] flex items-center justify-center rounded-full w-[60px] h-[60px] text-white bg-hover
+    }
+
+    .icon-features {
+        @apply flex items-center justify-center 
+    }
+
+    .cart-features .left-cart {
+        @apply flex flex-col mr-[20px]
+    }
+
+
+    /* paralax */
+
+    .paralax {
+        @apply w-full h-auto pc:h-auto 
+    }
+
+
+    .paralax-sec {
+        @apply w-[22%] h-full my-[10px]  flex flex-col justify-center items-center pc:w-[50%] laptop:w-full
+    }
+
+    /* portfolio */
+
+    .portfolio{
+        @apply   w-full   py-[80px]
+    }
+
+
+    .btns-box{
+        @apply  w-full flex justify-center items-center flex-wrap py-[40px] gap-1
+    }
+
+    .portfolio-btn{
+        @apply  border-hover text-hover border-[0.8px] rounded-[25px] py-[14px] px-[30px]  my-[5px] hover:bg-hover hover:text-white
+    }
+
+    .portfolio-img-box{
+        @apply  w-full h-[800px] laptop:h-auto my-[5px]
+    }
+
+    .portfolio-img{
+        @apply w-[30%] h-[30%] laptop:w-full mx-[10px] my-[10px]  flex justify-center items-center relative
+    }
+
+    .portfolio-content{
+        @apply hidden w-[90%] h-[90%] absolute laptop:my-[5px]
+    }
+    .popup{
+        @apply   text-white text-[18px] hover:text-hover
+    }
+
+    /* pricing content */
+    .pricing-table{
+        @apply  w-[290px] h-[600px] mx-[20px] pc:w-[95%] 
+    }
+    .pricing-center-table{
+        @apply bg-dark-gray w-[400px] mx-[20px] h-[630px] pc:w-[95%] pc:my-[60px] absolute right-0 left-0 top-[-30%] rounded-sm
+    }
+    .amount-sec{
+        @apply rounded-full w-[110px] h-[110px] flex flex-col text-[28px] justify-center items-center border-[4px] border-white absolute right-0 left-0 top-[-30%] mx-auto  bg-hover text-white
+    }
+    .pricing-title{
+        @apply w-full h-[30%] bg-gray flex justify-center items-center relative
+    }
+    .pricing-content{
+        @apply  w-full h-[70%] flex flex-col  items-center
+    }
+    .content{
+        @apply  w-full h-[40px] py-[25px]  text-center
+    }
+
+    /* My Team Section */
+    .team-member{
+        @apply w-full h-auto flex justify-center items-center flex-wrap
+    }
+    .member-cart{
+        @apply w-[20%] h-auto mx-[20px] pc:w-[45%] laptop:w-full my-[20px]
+    }
+    .member-img{
+        @apply  w-full h-[50%]
+    }
+    .contact-com{
+        @apply w-full flex justify-center items-center gap-2 py-[20px]
+    }
+    .contact{
+        @apply w-[35px] h-[35px] flex justify-center items-center rounded-full bg-black
+    }
+    .contact i{
+        @apply text-white
+    }
+
+    .member-position{
+        @apply  w-full flex justify-center text-[16px] py-[10px] border-b-[0.02px] border-light-gray
+    }
+    /* Client */
+    .client-des{
+        @apply  h-full w-[70%] laptop:w-full py-[40px] mx-auto flex flex-col justify-center items-center
+    }
+
+   .img-box{
+    @apply  flex justify-center items-center w-[100px] h-[100px] border-white border-[2px] rounded-[8px] 
+   }
+
+    /* Last News */
+    .news-carts{
+        @apply w-full h-auto flex justify-center items-center pc:flex-col
+    }
+    .news{
+        @apply  w-[30%] h-auto mx-[15px] pc:w-[100%] pc:my-[10px]
+    }
+    .news-date{
+        @apply w-full h-[40px] flex flex-wrap  items-center my-2
+    }
+    .news-date span{
+        @apply text-black-text
+    }
+    .news-date i{
+       @apply text-black-text
+    }
+    .news-date .author{
+        @apply flex items-center justify-center   gap-2 p-2
+    }
+    .news-date .date{
+        @apply   flex items-center justify-center  gap-2 p-2
+    }
+    .news-date .comment{
+        @apply flex items-center justify-center  gap-2 p-2
+    }
+
+    /* footer */
+    footer{
+        @apply h-auto py-[50px] bg-hover
+    }
+
+    .contact-footer{
+        @apply  w-full h-[70%] flex justify-center items-center flex-wrap
+    }
+
+    .footer-contact{
+        @apply  w-[45px] h-[45px] mx-2 flex justify-center items-center rounded-full hover:bg-white hover:text-hover
+    }
+    .container {
+        @apply w-[80%] tv:w-[98%] mx-auto
+    }
+
+    .container-Lg{
+        @apply w-[90%] tv:w-[98%] mx-auto
+    }
+}

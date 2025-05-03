@@ -1,0 +1,15 @@
+﻿@page
+@model GirifinDev.Pages.Admin.PageComment.DetailsModel
+@{
+    ViewBag.Title = "کامنت ها";
+}
+<form method="post">
+    <label>نام</label>
+    <input asp-for="DetailsComment.Name" class="form-control" readonly />
+    <label>ایمیل</label>
+    <input asp-for="DetailsComment.Email" class="form-control" readonly />
+    <label>متن نظر</label>
+    <input asp-for="DetailsComment.comment" class="form-control" readonly />
+    <a asp-page="Delete" asp-route-id="@(Model.DetailsComment.Id)" class="btn btn-danger">حذف</a>
+    <a asp-page="index" class="btn btn-primary">برگشت</a>
+</form>

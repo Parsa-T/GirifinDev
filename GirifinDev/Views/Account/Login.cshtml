@@ -1,0 +1,47 @@
+﻿@model GirifinDev.Application.DTO.LoginUserDTO
+@{
+    ViewData["Title"] = "ورود به سایت";
+    Layout = "_LayoutLogin";
+}
+
+
+<img class="wave" src="/LoginContent/img/wave.png">
+<div class="container">
+    <div class="img">
+        <img src="/LoginContent/img/bg.svg">
+    </div>
+    <div class="login-content">
+        <form method="post" asp-action="Login">
+            <img src="/LoginContent/img/avatar.svg">
+            <h2 class="title">ورود به سایت</h2>
+            <div class="input-div one">
+                <div class="i">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="div">
+                    <h5>ایمیل</h5>
+                    <input asp-for="Email" type="email" class="input">
+                    <span asp-validation-for="Email" style="color:red"></span>
+                </div>
+            </div>
+            <div class="input-div pass">
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="div">
+                    <h5>رمز عبور</h5>
+                    <input asp-for="Password" type="password" class="input">
+                    <span asp-validation-for="Password" style="color:red"></span>
+                </div>
+            </div>
+            <div style="text-align:end">
+                <span>من را بخاطر بسپار</span> <input asp-for="RememberMe" />
+            </div>
+            <input type="submit" class="btn" value="ورود به سایت">
+        </form>
+    </div>
+</div>
+
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

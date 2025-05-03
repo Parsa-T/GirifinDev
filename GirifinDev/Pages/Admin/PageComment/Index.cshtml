@@ -1,0 +1,36 @@
+﻿@page
+@model GirifinDev.Pages.Admin.PageComment.IndexModel
+@{
+    ViewBag.Title = "مدیریت کامنت ها";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>نام</th>
+            <th>ایمیل</th>
+            <th>تاریخ</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.GetAllComment)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Email
+                </td>
+                <td>
+                    @item.CreateTime.ToShamsi()
+                </td>
+                <td>
+                    <a asp-page="Delete" asp-route-id="@(item.Id)" class="btn btn-danger">حذف</a>
+                    <a asp-page="Details" asp-route-id="@(item.Id)" class="btn btn-primary">اطلاعات بیشتر</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

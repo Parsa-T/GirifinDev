@@ -1,0 +1,10 @@
+﻿@page
+@model GirifinDev.Pages.Admin.CategoryProject.AddModel
+@{
+    ViewBag.Title = "عنوان جدید";
+}
+<form method="post">
+    <label>عنوان</label>
+    <input asp-for="AddCategory.Title" class="form-control" />
+    <input type="submit" value="ثبت" class="btn btn-success" />
+</form>

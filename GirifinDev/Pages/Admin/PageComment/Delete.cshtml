@@ -1,0 +1,15 @@
+﻿@page
+@model GirifinDev.Pages.Admin.PageComment.DeleteModel
+@{
+    ViewBag.Title = "حذف کامنت";
+}
+<form method="post">
+    <input asp-for="DeleteComment.Id" type="hidden" />
+    <label>نام</label>
+    <input asp-for="DeleteComment.Name" class="form-control" readonly />
+    <label>ایمیل</label>
+    <input asp-for="DeleteComment.Email" class="form-control" readonly />
+    <label>متن نظر</label>
+    <input asp-for="DeleteComment.comment" class="form-control" readonly />
+    <input type="submit" value="حذف" class="btn btn-danger" />
+</form>

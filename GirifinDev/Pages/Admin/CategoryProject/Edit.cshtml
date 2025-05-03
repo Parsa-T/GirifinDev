@@ -1,0 +1,11 @@
+﻿@page
+@model GirifinDev.Pages.Admin.CategoryProject.EditModel
+@{
+    ViewBag.Title = "ویرایش عناوین";
+}
+<form method="post">
+    <input asp-for="EditCategory.Id" type="hidden" />
+    <label>عنوان</label>
+    <input asp-for="EditCategory.Title" class="form-control" />
+    <input type="submit" value="ویرایش" class="btn btn-warning" />
+</form>

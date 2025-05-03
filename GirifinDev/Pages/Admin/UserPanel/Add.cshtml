@@ -1,0 +1,26 @@
+﻿@page
+@model GirifinDev.Pages.Admin.UserPanel.AddModel
+@{
+    ViewBag.Title="کاربر جدید";
+}
+<form method="post" enctype="multipart/form-data">
+    <label>نام کاربری</label>
+    <input asp-for="AddUsers.UserName" class="form-control" />
+    <label>سمت کاربر</label>
+    <input asp-for="AddUsers.UserSkil" class="form-control" />
+    <label>عکس کاربر</label>
+    <input asp-for="AddUsers.imgUp" class="form-control" />
+    <label>توضیح مختصر</label>
+    <textarea asp-for="AddUsers.Description" class="form-control"></textarea>
+    <label>ایمیل</label>
+    <input asp-for="AddUsers.Email" class="form-control" />
+    <label>رمز عبور</label>
+    <input asp-for="AddUsers.Password" class="form-control" />
+    <label>لینک سایت</label>
+    <input asp-for="AddUsers.SiteLink" class="form-control" />
+    <label>گیت هاب</label>
+    <input asp-for="AddUsers.GitHub" class="form-control" />
+    <label>صفحه لینک دین</label>
+    <input asp-for="AddUsers.LinkDin" class="form-control" />
+    <input type="submit" value="ثبت" class="btn btn-success" />
+</form>

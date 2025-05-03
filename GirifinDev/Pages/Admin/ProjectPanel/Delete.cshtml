@@ -1,0 +1,19 @@
+﻿@page
+@model GirifinDev.Pages.Admin.ProjectPanel.DeleteModel
+@{
+    ViewBag.Title = "حذف پروژه";
+}
+<form method="post" enctype="multipart/form-data">
+    <input asp-for="DeleteProject.Id" type="hidden" />
+    <label>عنوان پروژه</label>
+    <input asp-for="DeleteProject.CategoryProject.Title" class="form-control" readonly />
+    <label>نام پروژه</label>
+    <input asp-for="DeleteProject.Name" class="form-control" readonly />
+    <label>عکس پروژه</label>
+    <img src="/AdminPanel/ProjectPanel/@(Model.DeleteProject.ImageUrl)" class="thumbnail" style="max-width:120px" />
+    <label>توضیح مختصر</label>
+    <textarea asp-for="DeleteProject.Description" class="form-control" readonly></textarea>
+    <label>لینک پروژه</label>
+    <input asp-for="DeleteProject.Link" class="form-control" readonly />
+    <input type="submit" value="حذف" class="btn btn-danger" />
+</form>

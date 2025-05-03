@@ -1,0 +1,27 @@
+﻿@page
+@model GirifinDev.Pages.Admin.UserPanel.EditModel
+@{
+    ViewBag.Title = "ویرایش کاربران";
+}
+<form method="post" enctype="multipart/form-data">
+    <input asp-for="EditUser.Id" type="hidden" />
+    <label>نام کاربری</label>
+    <input asp-for="EditUser.UserName" class="form-control" />
+    <label>سمت کاربر</label>
+    <input asp-for="EditUser.UserSkil" class="form-control" />
+    <label>عکس کاربر</label>
+    <input asp-for="EditUser.imgUp" class="form-control" />
+    <label>توضیح مختصر</label>
+    <textarea asp-for="EditUser.Description" class="form-control"></textarea>
+    <label>ایمیل</label>
+    <input asp-for="EditUser.Email" class="form-control" />
+    <label>رمزعبور</label>
+    <input asp-for="EditUser.Password" class="form-control" />
+    <label>لینک سایت</label>
+    <input asp-for="EditUser.SiteLink" class="form-control" />
+    <label>گیت هاب</label>
+    <input asp-for="EditUser.GitHub" class="form-control" />
+    <label>صفحه لینک دین</label>
+    <input asp-for="EditUser.LinkDin" class="form-control" />
+    <input type="submit" value="ویرایش" class="btn btn-warning" />
+</form>

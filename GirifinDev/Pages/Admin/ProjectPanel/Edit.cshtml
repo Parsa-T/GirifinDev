@@ -1,0 +1,19 @@
+﻿@page
+@model GirifinDev.Pages.Admin.ProjectPanel.EditModel
+@{
+    ViewBag.Title = "ویرایش پروژه ها";
+}
+<form method="post" enctype="multipart/form-data">
+    <input asp-for="EditProject.Id" type="hidden" />
+    <label>عنوان پروژه</label>
+    <input asp-for="EditProject.CategoryId" class="form-control"/>
+    <label>نام پروژه</label>
+    <input asp-for="EditProject.Name" class="form-control" />
+    <label>عکس پروژه</label>
+    <input asp-for="EditProject.imgUp" class="form-control" />
+    <label>توضیح مختصر</label>
+    <textarea asp-for="EditProject.Description" class="form-control"></textarea>
+    <label>لینک پروژه</label>
+    <input asp-for="EditProject.Link" class="form-control" />
+    <input type="submit" value="ویرایش" class="btn btn-warning" />
+</form>

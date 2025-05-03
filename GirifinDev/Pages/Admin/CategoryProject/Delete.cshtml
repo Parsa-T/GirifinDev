@@ -1,0 +1,11 @@
+﻿@page
+@model GirifinDev.Pages.Admin.CategoryProject.DeleteModel
+@{
+    ViewBag.Title = "حذف عنوان ";
+}
+<form method="post">
+    <input asp-for="DeleteCategory.Id" type="hidden" />
+    <label>عنوان</label>
+    <input asp-for="DeleteCategory.Title" class="form-control" readonly />
+    <input type="submit" value="حذف" class="btn btn-danger" />
+</form>

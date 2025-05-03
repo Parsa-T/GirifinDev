@@ -1,0 +1,26 @@
+﻿@page
+@model GirifinDev.Pages.Admin.ProjectPanel.AddModel
+@{
+    ViewBag.Title = "پروژه جدید";
+}
+<form method="post" enctype="multipart/form-data">
+    <select asp-for="AddProject.CategoryId">
+        @foreach (var item in Model.AddProject.categoryProjectDTOs)
+        {
+
+            <option value="@item.Id">
+                @item.Title
+            </option>
+
+        }
+    </select><br />
+    <label>نام پروژه</label>
+    <input asp-for="AddProject.Name" class="form-control" />
+    <label>عکس پروژه</label>
+    <input asp-for="AddProject.imgUp" class="form-control" />
+    <label>توضیح مختصر</label>
+    <textarea asp-for="AddProject.Description" class="form-control" ></textarea>
+    <label>لینک پروژه</label>
+    <input asp-for="AddProject.Link" class="form-control" />
+    <input type="submit" value="ثبت" class="btn btn-success" />
+</form>
